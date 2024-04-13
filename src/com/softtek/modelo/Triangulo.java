@@ -6,13 +6,6 @@ public class Triangulo extends Figura {
     private double base;
     private double altura;
 
-
-    // Métodos
-    public double calcularArea() {
-        double area = base*altura;
-        return area;
-    }
-
     // Constructores
 
 
@@ -22,13 +15,25 @@ public class Triangulo extends Figura {
         this.altura = altura;
     }
 
-    public Triangulo(double base, double altura) {
-        this.base = base;
-        this.altura = altura;
+    public Triangulo(int i, int i1) {
+
     }
 
     public Triangulo() {
+
     }
+
+    // Métodos
+    @Override
+    public double calcularArea() {
+        return base*altura/2;
+    }
+
+    @Override
+    public int mostrarPosicion(int x, int y) {
+        return 0;
+    }
+
 
     // Setters y Getters
 

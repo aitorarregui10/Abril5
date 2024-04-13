@@ -7,8 +7,6 @@ public class Operador extends Empleado {
 
     // Métodos
     public double calcularNomina() {
-        double dinero = ((incentivo * piezas) + sueldo) * PORCENTAJE;
-        return dinero;
+        return super.calcularNomina() + (incentivo * piezas);
     }
-
 }

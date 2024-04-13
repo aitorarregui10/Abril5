@@ -1,6 +1,6 @@
 package com.softtek.modelo;
 
-public class Cuadrado extends Figura{
+public class Cuadrado extends Figura {
 
     // Attributos
     private double lado;
@@ -8,16 +8,28 @@ public class Cuadrado extends Figura{
     // Constructor
 
 
-    public Cuadrado(double lado) {
+    public Cuadrado(int x, int y, double lado) {
+        super(x, y);
         this.lado = lado;
     }
+
+    public Cuadrado(int i) {
+        super();
+    }
+
     public Cuadrado() {
+
     }
 
     // Métodos
+    @Override
     public double calcularArea() {
-        double area = lado*lado;
-        return area;
+        return lado*lado;
+    }
+
+    @Override
+    public int mostrarPosicion(int x, int y) {
+        return 0;
     }
     // Getters y Setters
 

@@ -6,7 +6,6 @@ public class Gerente extends Empleado {
 
     // Métodos
     public double calcularNomina() {
-        double dinero = (bono + sueldo) * PORCENTAJE;
-        return dinero;
+        return super.calcularNomina() + bono * PORCENTAJE;
     }
 }

@@ -7,7 +7,6 @@ public class Vendedor extends Empleado {
 
     // Métodos
     public double calcularNomina() {
-        double dinero = ((ventas * comision) + sueldo) * PORCENTAJE;
-        return dinero;
+        return super.calcularNomina()+ (ventas * comision)*PORCENTAJE;
     }
 }

@@ -1,29 +1,33 @@
 package com.softtek.modelo;
 
-public class Figura {
-    // Attributos
+public abstract class Figura {
+    // Atributos
     protected int x;
     protected int y;
 
-
-    // Métodos
-    public double calcularArea() {
-        double area=x*y;
-        return area;
-    }
-    public String mostrarPosicion(String posicion) {
-           return posicion;
-    }
-
-    // Constructores
-
+    //Constructores
     public Figura(int x, int y) {
-        this.x = x;
-        this.y = y;
+        this.x=x;
+        this.y=y;
     }
 
     public Figura() {
+
     }
+
+
+    // Métodos
+    public abstract double calcularArea();
+
+    public abstract int mostrarPosicion(int x, int y);
+
+/*    // Constructores
+
+
+
+    public Figura() {
+    }
+*/
 
     // Setter y Getters
 

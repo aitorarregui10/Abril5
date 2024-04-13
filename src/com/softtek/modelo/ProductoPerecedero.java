@@ -1,5 +1,6 @@
 package com.softtek.modelo;
 import java.time.LocalDate;
+import java.time.Period;
 
 
 public class ProductoPerecedero extends Producto {
@@ -9,8 +10,7 @@ public class ProductoPerecedero extends Producto {
     private LocalDate fFabricacion;
 
     // Métodos
-    public int tiempoConsumicion(int dia) {
-        return dia;
+    public int tiempoConsumicion() {
+        return Period.between(fFabricacion, fCaducidad).getDays();
     }
-
 }
